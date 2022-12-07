@@ -4,9 +4,14 @@
 
 # Notebooks for Submission
 
-[ ~ Data Exploration Notebook ~ ](Assignments/Data Exploration Milestone/DataExporation.ipynb)
-[ ~ Preprocessing & First Model Notebook ~ ](Assignments/Preprocessing & First Model/PreprocessingFirstModelMilestone.ipynb)
-[ ~ Second Model Notebook ~ ](Assignments/Second Model/Second Model.ipynb)
+Data Exploration
+[ ~ Data Exploration Notebook ~ ](Assignments/Data%Exploration%Milestone/DataExporation.ipynb)
+
+Preprocessing
+[ ~ Preprocessing & First Model Notebook ~ ](Assignments/Preprocessing%&%First%Model/PreprocessingFirstModelMilestone.ipynb)
+
+Second Notebook
+[ ~ Second Model Notebook ~ ](Assignments/Second%Model/Second%Model.ipynb)
 
 # Write Up
 
