@@ -1,5 +1,5 @@
 # Table of Contents
-1) [Introdction](#introduction)
+1) [Introduction](#introduction)
 2) [Figures](#figures)
 3) [Methods](#methods)
 4) [Results](#results)
@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Hello, and welcome to our research on hotel reservation cancellations. This project is done for our ECS 171 - Machine Learning class at UC Davis, instructed by Edwin Solares. Throughout our project, we demonstrate how we are able to accurately predict future hotel cancellations, utilizing recorded data of previous behaviors and various machine learning tools. This could possibly spark popularity amongst denying reservations to hotels, which is something popular companies like AirBNB utilizes.  Our results from the data holds significance as we are able positively impact hotels from all over the world by helping them save their time, energy, and resources on tourists and guests who are more likely to show up.
+Hello, and welcome to our research on hotel reservation cancellations. This project is done for our ECS 171 - Machine Learning class at UC Davis, instructed by Edwin Solares. Throughout our project, we demonstrate how we are able to accurately predict future hotel cancellations, utilizing recorded data of previous behaviors and various machine learning tools. This could possibly spark popularity to deny reservations for hotels, which is something popular companies such as AirBNB utilizes.  Our results from the data holds significance as we are able positively impact hotels from all over the world by helping them save their time, energy, and resources on tourists and guests who are more likely to show up.
 
 ## Figures
 The figures below show how varying attributes can have a profound effect on whether a hotel reservation will be cancelled.
