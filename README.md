@@ -224,13 +224,35 @@ weighted avg       0.79      0.79      0.78     35817
 Our plot using sklearn PCA and matplotlib is shown below. 
 ![PCA of ANN](Images/annPCA.png "PCA of ANN")
 
-All of these results are displayed in the Model Two notebook.
+All of these results are displayed in the [Model Two Notebook](Assignments/Second%20Model/Second%20Model.ipynb).
 
 ### Model Two
 
-Our results from our SVM model were measurements of 77% testing accuracy for a linear kernel and 75% testing accuracy for a rbf kernel. 
+Our results from our SVM model were measurements of 77% testing accuracy for a linear kernel and 75% testing accuracy for a rbf kernel. Here is the Classification Report and PCA plot for the linear kernel:
+```
+              precision    recall  f1-score   support
 
-WILL ADD THESE PLOTS AND IMAGES ONCE THE SVM IS DONE RUNNING
+           0       0.73      1.00      0.84     22643
+           1       0.98      0.38      0.54     13174
+
+    accuracy                           0.77     35817
+   macro avg       0.86      0.69      0.69     35817
+weighted avg       0.82      0.77      0.73     35817
+```
+![PCA of Linear Kernel](Images/linearPCA.png "PCA of Linear Kernel")
+
+Here is the Classification Report and PCA plot for the rbf kernel:
+```
+              precision    recall  f1-score   support
+
+           0       0.72      1.00      0.83     22643
+           1       0.99      0.33      0.49     13174
+
+    accuracy                           0.75     35817
+   macro avg       0.85      0.66      0.66     35817
+weighted avg       0.82      0.75      0.71     35817
+```
+![PCA of RBF Kernel](Images/rbfPCA.png "PCA of RBF Kernel")
 
 ## Discussion
 
