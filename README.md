@@ -21,6 +21,7 @@ Figure 3 shows how the number of stays over weekend nights can affect a cancella
 
 ### Figure Five
 Figure 5 surprisingly shows how in some cases it is actually more likely that a repeated guest cancels than a new guest. In this figure we can also see how data can use given data to relate other attributes with one another.
+#### Figure Five
 ![Figure Five](Images/figure5.png "Figure Five")
 
 ## Methods
@@ -253,12 +254,12 @@ Our results from our SVM model were measurements of 77% testing accuracy for a l
 ```
               precision    recall  f1-score   support
 
-           0       0.73      1.00      0.84     22643
-           1       0.98      0.38      0.54     13174
+           0       0.73      1.00      0.84     22403
+           1       0.99      0.39      0.55     13414
 
     accuracy                           0.77     35817
-   macro avg       0.86      0.69      0.69     35817
-weighted avg       0.82      0.77      0.73     35817
+   macro avg       0.86      0.69      0.70     35817
+weighted avg       0.83      0.77      0.74     35817
 ```
 ![PCA of Linear Kernel](Images/linearPCA.png "PCA of Linear Kernel")
 
@@ -266,18 +267,35 @@ Here is the Classification Report and PCA plot for the rbf kernel:
 ```
               precision    recall  f1-score   support
 
-           0       0.72      1.00      0.83     22643
-           1       0.99      0.33      0.49     13174
+           0       0.71      1.00      0.83     22403
+           1       0.99      0.34      0.50     13414
 
     accuracy                           0.75     35817
-   macro avg       0.85      0.66      0.66     35817
+   macro avg       0.85      0.67      0.67     35817
 weighted avg       0.82      0.75      0.71     35817
 ```
 ![PCA of RBF Kernel](Images/rbfPCA.png "PCA of RBF Kernel")
 
 ## Discussion
 
-This is where you will discuss the why, and your interpretation and your though process from beginning to end. This will mimic the sections you have created in your methods section as well as new sections you feel you need to create. You can also discuss how believable your results are at each step. You can discuss any short comings. It's ok to criticize as this shows your intellectual merit, as to how you are thinking about things scientifically and how you are able to correctly scrutinize things and find short comings. In science we never really find the perfect solution, especially since we know something will probably come up int he future (i.e. donkeys) and mess everything up. If you do it's probably a unicorn or the data and model you chose are just perfect for each other!
+Here we will discuss the why and our thought process at each step of this project.
+
+### Data Exploration
+When first going through the data, there were many things that came to mind. The first task of looking at what kind of columns we had and what information they told was the first goal in our data exploration. Given 32 columns of data and 3,820,480 observations, there was a lot given to be able to create a model to perform our task. We discovered a lot of redundancies in the columns and felt that a lot of them could have been grouped together in more efficient ways. In hindsight, one of our shortcomings was not recognizing that earlier. It could have definitely improved the run time and efficiency of our training and testing. The second task we thought was necessary to do was check if any columns were missing data. This is a step we definitely thought was a great result as it definitely made debugging and finding columns we wanted to remove much easier. Lastly, the seaborn pairplots, histplots, and displots visualizations made it much easier to realize what kind of data we were working with. This was another thing that contributed towards preprocessing that we thought was necessary to determine which columns we wanted to remove or transform.
+
+### Preprocessing
+During our preprocessing stage, our first priority was to transform our data by cutting out attributes that were unnecessary. We first chose to drop our ‘reservation_status’ and ‘reservation_status_date’ columns because we discovered that the ‘reservation_status’ was essentially the same as our class ‘is_canceled’. Leaving this attribute in our dataset and training data would make our research futile as most models would be able to spot the immense correlation between the two columns of data. Furthermore, we decided on dropping the columns ‘country’, ‘company’, and ‘agency.’ This is due to being categorical attributes with missing data values as it would be inaccurate to impute the data with a set value. After this, we thought it was necessary to normalize to create a scale for our data. As well,  we encoded our categorical data to numerical values to allow our model to process both categorical and numerical attributes.
+
+### Data Splitting
+When performing our training testing split, we were initially inclined to create a 80% train and 20% test split. However, given the amount of data provided, we thought we could take advantage of this and make use of a larger testing dataset to see how better off our models would perform (perfectly fit, underfitting, overfitting). We believed it would really help with creating a model that could be applicable to real world use.
+
+### First Model
+After all the transformations to the dataset from the preprocessing stage, it was time to select and run our first model on predicting hotel cancellations. Initially, we had many ideas on which model to use first: ANN, Support Vector Machine, K-Nearest Neighbor, Naive Bayes, etc. However, for just pure simplicity, we decided to use an ANN for the first model. We thought it was a very neutral pick in regards to how it would perform. We wanted to avoid creating our own unique ANN, so we defected to using the Keras library for our model. When deciding what dense layers we wanted to use for the neural network, we thought more dense layers would result better. After all, 26 input dimensions all with their very distinct and unique values, scales, and more is a lot of information to process and work with. As a result, we settled on 6 dense layers, with 4 of them being hidden layers. To be completely transparent, many of the activation functions were chosen at random. The only decision making going into choosing was that we know that ReLu and Tanh tend to be very popular activation functions, so we gave them more units to work with at the beginning of the model. To finish it off, we thought a sigmoid function at the end to determine 1s and 0s of the hotel cancellation was appropriate. After running the model for 10 epochs, which ended up taking quite a longer time than anticipated, we ended up with no improvement in our loss. Despite this, our classification report stated 79% accuracy for training and testing, which is great considering the loss in the fit. For some reason, we thought this was too good to be true. I decided to attempt this again and test it further by running 100 epochs on the data split, which is shown in the Second Model notebook. Even after 100 epochs, no improvements were made to the loss. Thus, it is quite a shortcoming to see even after running our model for an hour to see no change in accuracy on the classification report. This made us think about whether our data may be off or if we maybe chose the wrong model.
+
+### Second Model
+
+### Reporting Results
+When it comes to reporting our results, we chose to use the handy classification_report() from sklearn to report the many statistics on our test yhats and train yhats. However, most important, the report efficiently shows us how accurate our models were. Other measurements include recall, precision, f1-score, and weighted avg. Additionally, in order to visualize our accuracy, we decided to utilize principal component analysis(PCA) to reduce the dimensions of our attributes data to a 1 dimensional X value. It was not perfect, as large amounts of data was most likely cropped out for efficiency, but it gave us practicality and insight as we were able to see and plot whether a specific point displayed a correct value/color when compared to the y_test.
 
 ## Conclusion 
 
