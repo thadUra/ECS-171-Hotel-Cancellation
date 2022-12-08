@@ -1,3 +1,14 @@
+# Table of Contents
+1) [Introdction](#introduction)
+2) [Figures](#figures)
+3) [Methods](#methods)
+4) [Results](#results)
+5) [Discussion](#discussion)
+6) [Conclusion](#conclusion)
+7) [CollaborationStatement](#collaboration-statement)
+8) [PriorSubmissions](#prior-submissions)
+9) [RelatedNotebooks](#related-notebooks)
+
 ## Introduction
 
 Hello, and welcome to our research on hotel reservation cancellations. This project is done for our ECS 171 - Machine Learning class at UC Davis, instructed by Edwin Solares. Throughout our project, we demonstrate how we are able to accurately predict future hotel cancellations, utilizing recorded data of previous behaviors and various machine learning tools. This could possibly spark popularity amongst denying reservations to hotels, which is something popular companies like AirBNB utilizes.  Our results from the data holds significance as we are able positively impact hotels from all over the world by helping them save their time, energy, and resources on tourists and guests who are more likely to show up.
@@ -311,13 +322,13 @@ Spent majority of the time working on the implementation of the coding portions 
 Spent more time on facilitating conversations and delegating tasks on what needed to be done for each assignment. Provided feedback for coding portions and also wrote the majority of notebook explanations for people to follow along. Did some of the coding portions in the Data Exploration and Preprocessing Milestones.
 
 
-# Prior Submissions
+## Prior Submissions
 1) [Group Project Abstract Submission](Assignments/Abstraction.md)
 2) [Data Exploration Milestone](Assignments/Data%20Exploration%20Milestone)
 3) [Preprocessing & First Model Building and Evaluation Milestone](Assignments/Preprocessing%20%26%20First%20Model)
 4) [Final Submission](README.md)
 
-# Related Notebooks
+## Related Notebooks
 1) [Data Exploration Notebook](Assignments/Data%20Exploration%20Milestone/DataExploration.ipynb)
 2) [Preprocessing & First Model Notebook](Assignments/Preprocessing%20&%20First%20Model/PreprocessingFirstModelMilestone.ipynb)
 3) [Second Model Notebook](Assignments/Second%20Model/Second%20Model.ipynb)
