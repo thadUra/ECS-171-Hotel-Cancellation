@@ -1,6 +1,27 @@
-# Introduction
+## Introduction
 
 Hello, and welcome to our research on hotel reservation cancellations. This project is done for our ECS 171 - Machine Learning class at UC Davis, instructed by Edwin Solares. Throughout our project, we demonstrate how we are able to accurately predict future hotel cancellations, utilizing recorded data of previous behaviors and various machine learning tools. This could possibly spark popularity amongst denying reservations to hotels, which is something popular companies like AirBNB utilizes.  Our results from the data holds significance as we are able positively impact hotels from all over the world by helping them save their time, energy, and resources on tourists and guests who are more likely to show up.
+
+## Figures
+The figures below show how varying attributes can have a profound effect on whether a hotel reservation will be cancelled.
+
+### Figures One & Two
+Figure 1 shows how being a repeated guest can have a massive impact on whether a hotel reservation is canceled as it is significantly more probable that a repeated guest will not cancel their reservation. Additionally, Figure 2 shows how previous behaviors have a strong correlation with future actions as it is remarkably more likely that a hotel reservation is canceled when it had already been canceled once in the past. 
+#### Figure One
+![Figure One](Images/figure1.png "Figure One")
+#### Figure Two
+![Figure Two](Images/figure2.png "Figure Two")
+
+### Figures Three & Four
+Figure 3 shows how the number of stays over weekend nights can affect a cancellation. Cancellations per weekend night is over half as likely to be canceled than not canceled for all nights. In contrast, Figure 4 shows how the number of stays over week nights can affect cancellations. Canelations per week night start off under half to be canceled than not canceled for 0 to 1. However, as days pass the likelihood of cancelation to no cancellation increases to over half as well. This suggests that there is more of a tendency to cancel reservations over the weekends and longer stays than shorter stays on weekdays. 
+#### Figure Three
+![Figure Three](Images/figure3.png "Figure Three")
+#### Figure Four
+![Figure Four](Images/figure4.png "Figure Four")
+
+### Figure Five
+Figure 5 surprisingly shows how in some cases it is actually more likely that a repeated guest cancels than a new guest. In this figure we can also see how data can use given data to relate other attributes with one another.
+![Figure Five](Images/figure5.png "Figure Five")
 
 ## Methods
 
